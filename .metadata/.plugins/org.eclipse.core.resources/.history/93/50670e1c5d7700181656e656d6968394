@@ -1,0 +1,28 @@
+package udp;
+
+import java.awt.Frame;
+import java.awt.List;
+import java.awt.TextField;
+import java.net.DatagramSocket;
+
+public class Chat {
+	public Frame f;
+	public TextField tfIP;
+	public List list;
+	public DatagramSocket ds;
+	
+	
+	Chat()
+	{
+		
+	}
+	public void init()
+	{
+		
+	}
+	public static void main(String[] args) {
+		
+
+	}
+
+}

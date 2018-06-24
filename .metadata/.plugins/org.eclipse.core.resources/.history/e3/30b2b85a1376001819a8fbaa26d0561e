@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package tcp;
+
+import java.net.ServerSocket;
+
+/**
+ * @author ¥Û∑¨ Ì
+ *
+ */
+public class TcpSvr {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		ServerSocket(8888);
+
+	}
+
+}

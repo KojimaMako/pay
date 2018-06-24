@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package tcp;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+/**
+ * @author ¥Û∑¨ Ì
+ *
+ */
+public class TcpSvr {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		try {
+			ServerSocket svr = null;
+			svr = new ServerSocket(8888);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}
