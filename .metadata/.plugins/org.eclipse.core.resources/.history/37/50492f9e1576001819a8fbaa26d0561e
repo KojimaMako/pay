@@ -1,0 +1,11 @@
+package tcp;
+
+import java.net.Socket;
+
+public class TcpCli {
+
+	public static void main(String[] args) {
+		Socket cli = new Socket("127.0.0.1",8888);
+	}
+
+}
