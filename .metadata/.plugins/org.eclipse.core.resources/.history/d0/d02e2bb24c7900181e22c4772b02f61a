@@ -1,0 +1,24 @@
+package message;
+
+public class Item {
+	private int length;
+	private boolean nullFlag;
+	private char fillChar;
+	private ItemType type;
+	private Alignment alignment;
+	private Object value;
+	
+	public Item(int length,char fillChar,
+			boolean nullFlag,Alignment alignment)
+	{
+		this.length = length;
+		this.nullFlag = nullFlag;
+		this.alignment = alignment;
+		this.type = type;
+		this.fillChar = fillChar;
+	}
+	public static void main(String[] args) {
+
+}
+
+

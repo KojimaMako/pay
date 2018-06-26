@@ -1,0 +1,12 @@
+package message;
+
+public class Test {
+
+	public static void main(String[] args) {
+		TestHead head = new TestHead();
+		head.setTxCode("790001");
+		head.setLength(666);
+		System.out.println("");
+	}
+
+}

@@ -1,0 +1,18 @@
+package message;
+
+public class TestHead extends Pieces {
+	private String tx_code;
+	private int length;
+	
+	private Item[] items = new Item[] {
+			new Item("tx_code",8,' ',ItemType.STRING,
+					false,Alignment.RIGHT),
+			new Item("body_length",10,'0',ItemType.INT,
+					false,Alignment.RIGHT)
+	};
+	
+	super(items);
+	
+	public static void main(String[] args) {}
+
+}

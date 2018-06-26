@@ -1,0 +1,13 @@
+package message;
+
+import java.util.ArrayList;
+
+public class Pieces {
+	private List<Item> itemList = new ArrayList<Item>();
+	
+	
+	
+	
+	public static void main(String[] args) {	}
+
+}
