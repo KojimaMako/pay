@@ -1,10 +1,13 @@
 package tcp;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import message.*;
 
 public class TcpSvr_v2 {
 
@@ -37,18 +40,30 @@ class AccepedCli extends Thread
 	{
 		ObjectOutputStream output;
 		try {
+			byte[] b = new byte[1024];
 			output = new ObjectOutputStream(
 					cli.getOutputStream());
+			OutputStream op = cli.getOutputStream();
 			ObjectInputStream input = new ObjectInputStream(
 					cli.getInputStream());
-			String str = (String)input.readObject();
-			str = str.toUpperCase();
-			output.writeObject(str);
+			InputStream ip = cli.getInputStream();
+//			String str = (String)input.readObject();
+			int len = ip.read(b);
+			System.out.println("read"+new String(b,0,len));
+			TestHead tt = new TestHead();
+			tt.unpack(b, "GBK");
+			tt.setTxCode("888");
+			b = tt.pack("GBK");
+//			str = str.toUpperCase();
+//			output.writeObject(str);
+			op.write(b);
 			System.out.println(getId());
+			op.close();
+			ip.close();
 			input.close();
 			output.close();
 			cli.close();	
-		} catch (IOException | ClassNotFoundException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		

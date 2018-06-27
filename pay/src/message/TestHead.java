@@ -2,7 +2,7 @@ package message;
 
 public class TestHead extends Pieces {
 	private String txCode;
-	private int length;
+	private int bodyLength;
 	
 	private static final Item[] items = new Item[] {
 			new Item("txCode",8,' ',ItemType.STRING,
@@ -17,16 +17,19 @@ public class TestHead extends Pieces {
 	public void setTxCode(String txCode) {
 		this.txCode = txCode;
 	}
-	public void setLength(int length) {
-		this.length = length;
+	public void setBodyLength(int length) {
+		this.bodyLength = length;
 	}
 	public String getTxCode()
 	{
-		return this.txCode;
+		return txCode;
 	}
-	public int getLength()
+	public int getBodyLength()
 	{
-		return length;
+		return bodyLength;
+	}
+	public String toString() {
+		return new String(txCode + bodyLength);
 	}
 	public static void main(String[] args) {};
 

@@ -1,13 +1,13 @@
 package message;
 
 public class MessagePackage {
-	Pieces pies;
+	Pieces[] pies;
 	public byte[] pack(String charsetName) {
 		int index;
 		byte[] result = new byte[this.getLength()];
-		for( Pieces pie : pies) {
-			PropertyDescriptor ;
-		}
+//		for( Pieces pie : pies) {
+//			PropertyDescriptor ;
+//		}
 		return result;
 	}
 	
@@ -16,6 +16,7 @@ public class MessagePackage {
 		int ret = 0;
 		for (Pieces pie: pies )
 			ret += pie.getLength();
+		return ret;
 	}
 	public static void main(String[] args) {}
 
